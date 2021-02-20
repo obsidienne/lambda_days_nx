@@ -25,7 +25,7 @@ Download MNIST Database from the web site http://yann.lecun.com/exdb/mnist/
 
 
 ```
-iex(5)> b = File.read!("train-images-idx3-ubyte.gz") |> :zlib.gunzip()
+iex(5)> b = File.read!("tmp/train-images-idx3-ubyte.gz") |> :zlib.gunzip()
 <<0, 0, 8, 3, 0, 0, 234, 96, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   ...>>
@@ -79,7 +79,7 @@ iex(7)> Nx.to_batched_list(t, 30)
       [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, ...],
       ...
 
-iex(10)> l = File.read!("train-labels-idx1-ubyte.gz") |> :zlib.gunzip()
+iex(10)> l = File.read!("tmp/train-labels-idx1-ubyte.gz") |> :zlib.gunzip()
 <<0, 0, 8, 1, 0, 0, 234, 96, 5, 0, 4, 1, 9, 2, 1, 3, 1, 4, 3, 5, 3, 6, 1, 7, 2,
   8, 6, 9, 4, 0, 9, 1, 1, 2, 4, 3, 2, 7, 3, 8, 6, 9, 0, 5, 6, 0, 7, 6, 1, 8,
   ...>>
